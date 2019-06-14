@@ -1,0 +1,29 @@
+body{
+  background-color: antiquewhite;
+  height: 600px;
+  width: 700px;
+
+}
+form{
+
+  background-color: aliceblue;
+  height: 400px;
+  width: 500px;
+  padding-left: 30px;
+}
+.ng-valid[required], .ng-valid.required  {
+  border-left: 5px solid #42A948; /* green */
+}
+
+.ng-invalid:not(form)  {
+  border-left: 5px solid #a94442; /* red */
+}
+h1{
+  color: chartreuse;
+}
+nav{
+  align-content: center;
+  height: 60px;
+  background-color: transparent;
+}
+

@@ -1,0 +1,52 @@
+
+
+<body>
+<h1>REGISTRATION FORM</h1>
+<nav>
+  <a routerLink="/login" routerLinkActive="active">Login</a>
+  <a routerLink="/register" routerLinkActive="active">Register</a>
+</nav>
+
+  <form [formGroup]="Regform" (ngSubmit)="onSubmit()">
+<table><tr></tr><tr></tr><tr></tr>
+  <tr>
+    <td><label for="name">FIRST NAME   : </label></td>
+    <td><input type="text"  id="name" minlength="3"  name="name" formControlName="name"  required/></td>
+  </tr><tr></tr>
+  <tr>
+
+    <td> <label>LAST NAME   : </label></td>
+    <td> <input type="text"  id="sname" required minlength="3" formControlName="sname"  name="sname" /></td>
+  </tr><tr></tr>
+  <tr>
+
+    <td> <label>EMAIL ADDRESS  : </label></td>
+    <td> <input type="email" id="ename" required  name="ename" formControlName="ename" /></td>
+  </tr><tr></tr>
+  <tr>
+    <td> <label>PHONE NUMBER   : </label></td>
+    <td> <input type="text" id="pname" required minlength="10"  name="pname" formControlName="pname"/></td>
+  </tr><tr></tr>
+  <tr>
+
+    <td> <label>USERNAME   : </label></td>
+    <td> <input type="text" id="uname" required minlength="4"  name="uname" formControlName="uname" /></td>
+  </tr>
+  <tr></tr>
+  <tr>
+    <td> <label>PASSWORD   : </label></td>
+    <td> <input type="password" id="password" required minlength="6" name="password" formControlName="password" /></td>
+  </tr>
+  <tr></tr>
+  <tr>
+  <td><label>CONFIRM PASSWORD  : </label></td>
+    <td>  <input type="password" id="conpass" required  name="conpass" formControlName="conpass" /></td>
+  </tr>
+  <tr></tr>
+<tr></tr>
+  <tr><button type="submit" class="btn btn-success" [disabled]="!Regform.valid">REGISTER</button></tr>
+</table>
+  </form>
+
+<P>ALREADY REGISTERED.CLICK <a routerLink="/login" routerLinkActive="active"><i>Login</i></a></P>
+</body>

@@ -1,0 +1,35 @@
+
+<html>
+<head><title>log in</title></head>
+
+<body>
+
+<h1>LOG IN</h1>
+<nav>
+<a routerLink="/login" routerLinkActive="active">Login</a>
+<a routerLink="/register" routerLinkActive="active">Register</a>
+</nav>
+<form [formGroup]="Logform" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+      <td><label for="name">FIRST NAME   : </label>
+      <td><input type="text"  id="name" minlength="3"  name="name"   required formControlName="name"/>
+</div>
+  <div class="form-group">
+       <label>LAST NAME   : </label>
+      <input type="text"  id="sname" required minlength="3"  name="sname" formControlName="sname"/>
+
+</div>
+
+    <button type="submit" class="btn btn-success" [disabled]="!Logform.valid">LOG IN</button>
+
+
+
+
+</form>
+<p>DON'T HAVE AN ACCOUNT,CLICK<a routerLink="/register" routerLinkActive="active">Register</a></p>
+</body>
+
+
+
+
+</html>
